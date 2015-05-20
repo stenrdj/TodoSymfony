@@ -1,0 +1,15 @@
+{% extends "ExamTodoBundle:Default:base.html.twig" %}
+{% block title %}{{ parent() }} - Home {% endblock %}
+
+
+{% block body %}
+
+  <div class="list-group">
+
+  {% for item in todos %}
+  <a href="{{ path('exam_todo_detaills',{'id': item.id}) }}" class="list-group-item">{{ item.title}}</a>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+exam_todo_homepage:
+    path:     /
+    defaults: { _controller: ExamTodoBundle:Default:index }
+
+exam_todo_detaills:
+    path:     /detaills/{id}
+    defaults: { _controller: ExamTodoBundle:Default:detaills }
+
+exam_todo_add:
+    path:     /add
+    defaults: { _controller: ExamTodoBundle:Default:add }

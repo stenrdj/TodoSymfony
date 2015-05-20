@@ -1,0 +1,16 @@
+{% extends "ExamTodoBundle:Default:base.html.twig" %}
+{% block title %}{{ parent() }} - Detaills {% endblock %}
+
+
+{% block body %}
+<div class="panel panel-default">
+  <div class="panel-heading">{{item.title}}</div>
+  <div class="panel-body">
+    {{item.content}}
+    <br><br><br>
+    <p> Avant le {{item.time | date("Y-m-d H:i:s")}}
+  </div>
+
+</div>
+<a href="{{path('exam_todo_homepage')}}" class="button">Retour</a>
+{% endblock %}

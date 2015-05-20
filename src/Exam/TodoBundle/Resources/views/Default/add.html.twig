@@ -1,0 +1,28 @@
+{% extends "ExamTodoBundle:Default:base.html.twig" %}
+{% block title %}{{ parent() }} - Add {% endblock %}
+
+{% block body %}
+
+<h1>TODO.COM</h1>
+
+<form method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Ajouter une chose á faire :</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entrez un titre" name="title">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Description de la chose á faire:</label>
+    <textarea class="form-control" rows="3" name="content"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Faire au plus tard:</label>
+    <input type="datetime" id="exampleInputFile" name="ladate">
+    <p class="help-block">Date sous forme de : '0000-00-00 00:00:00'.</p>
+  </div>
+  
+  <button type="submit" class="btn btn-default">valider</button>
+  <a class="btn btn-default" href="{{ path('exam_todo_homepage')}}">retour</a>
+</form>
+
+</form>
+{% endblock %}
